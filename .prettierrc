@@ -1,0 +1,11 @@
+{
+  "plugins": ["prettier-plugin-jinja-template", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": ["*.html", "*.njk"],
+      "options": {
+        "parser": "jinja-template"
+      }
+    }
+  ]
+}
