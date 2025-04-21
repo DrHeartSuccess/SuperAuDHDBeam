@@ -1,0 +1,16 @@
+/*! tailwindcss v4.1.4 | MIT License | https://tailwindcss.com */
+.fixed {
+  position: fixed;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
