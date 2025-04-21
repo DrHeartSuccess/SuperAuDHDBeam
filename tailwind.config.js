@@ -1,9 +1,12 @@
 module.exports = {
-  content: [
-    "./src/**/*.{html,js,njk}",
-  ],
+  content: ['_site/**/*.html'],
+  safelist: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        change: 'transparent',
+      },
+    },
   },
   plugins: [],
 }

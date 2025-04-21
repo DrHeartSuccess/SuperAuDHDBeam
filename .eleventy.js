@@ -1,3 +1,4 @@
+
 const now = String(Date.now());
 
 export default function (eleventyConfig) {

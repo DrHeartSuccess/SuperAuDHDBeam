@@ -9,23 +9,50 @@
   
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
-  <link rel="stylesheet" href="/style.css?v=1745212757561" />
+  <link rel="stylesheet" href="/style.css?v=1745220560885" />
   
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen">
   
-  <div class="fixed inset-0 flex justify-center items-center">
-    <div>
-      <span class="text-change">Good design</span>
-      <br />
-      <span class="change">is
-        <br />
-        as little design
-        <br />
-      as possible</span>
-    </div>
+<!-- Header -->
+<header class="bg-white shadow max-w-xl top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">My Webcomic</h1>
+    <nav class="space-x-4">
+      <a href="#" class="text-blue-600 hover:underline">Home</a>
+      <a href="#" class="hover:underline">Archive</a>
+      <a href="#" class="hover:underline">About</a>
+    </nav>
   </div>
+</header>
+
+<!-- Main Comic Section -->
+<main class="flex-grow container max-w-xl bg-black px-4 py-10">
+  <div class="text-center mb-6">
+    <h2 class="text-3xl font-semibold mb-2">Episode 12: The Duckening</h2>
+    <p class="text-gray-500">April 21, 2025</p>
+  </div>
+
+  <div class="flex justify-center">
+    <img src="https://via.placeholder.com/800x1200?text=Comic+Goes+Here" alt="Webcomic"
+      class="rounded-xl shadow-lg max-w-full h-auto" />
+  </div>
+
+  <!-- Navigation -->
+  <div class="mt-8 flex justify-between items-center text-lg">
+    <a href="#" class="text-blue-500 hover:underline">&larr; Previous</a>
+    <a href="#" class="text-blue-500 hover:underline">Next &rarr;</a>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white mt-10 max-w-xl shadow-inner">
+  <div class="container mx-auto px-4 py-6 text-center text-sm text-gray-500">
+    &copy; 2025 My Webcomic. All rights reserved.
+  </div>
+</footer>
+
 
 </body>
 
