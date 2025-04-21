@@ -1,12 +1,14 @@
 <div class="my-2 flex items-center justify-between text-lg">
   {% if previousPage %}
-    <a href="{{ previousPage.url }}" class="text-pink-600 hover:underline"
+    <a href="{{ previousPage.url | url }}" class="text-pink-600 hover:underline"
       ><==</a
     >
   {% else %}
     <span>&nbsp;</span>
   {% endif %}
   {% if nextPage %}
-    <a href="{{ nextPage.url }}" class="text-pink-600 hover:underline">==></a>
+    <a href="{{ nextPage.url | url }}" class="text-pink-600 hover:underline"
+      >==></a
+    >
   {% endif %}
 </div>

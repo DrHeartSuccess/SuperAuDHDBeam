@@ -15,5 +15,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("comicPages", function(collectionApi){
     return collectionApi.getFilteredByTag("comic").sort((a, b) => a.date - b.date);
   });
+  return {
+    pathPrefix: "/SuperAuDHDBeam/"
+  }
 };
 
