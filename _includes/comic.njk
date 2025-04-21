@@ -1,0 +1,31 @@
+{% extends "default.njk" %}
+
+{% set coll = collections.comicPages %}
+{% set firstPage = coll[0] %}
+{% set lastPage = coll[ (coll | length) - 1 ] %}
+{% set previousPage = coll | getPreviousCollectionItem %}
+{% set nextPage = coll | getNextCollectionItem %}
+
+{% block title %}SuperAuDHDBeam{% endblock %}
+{% block content %}
+  <div class="flex min-h-screen w-full flex-col items-center">
+    <div class="flex min-h-screen max-w-xl flex-col">
+      {% include "header.njk" %}
+
+      <main class="container flex-grow px-8 py-2">
+        {% include "pageNav.njk" %}
+        <div class="flex justify-center">
+          <img
+            src="{{ image_url }}"
+            alt="Webcomic"
+            class="h-auto max-w-full rounded-sm"
+          />
+        </div>
+        {% include "pageNav.njk" %}
+      </main>
+
+      {% include "footer.njk" %}
+    </div>
+  </div>
+  {% include "background.njk" %}
+{% endblock %}

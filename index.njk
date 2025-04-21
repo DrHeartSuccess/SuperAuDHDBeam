@@ -1,31 +1,7 @@
-{% extends "_includes/default.njk" %}
-{% block title %}SuperAuDHDBeam{% endblock %}
-{% block content %}
-  <div class="flex min-h-screen w-full flex-col items-center bg-slate-950">
-    <div class="flex min-h-screen max-w-xl flex-col">
-      {% include "_includes/header.njk" %}
-
-      <main class="container flex-grow px-8 py-2">
-        <div class="mb-6 text-center"></div>
-        <div class="my-2 flex items-center justify-between text-lg">
-          <a href="#" class="text-pink-600 hover:underline"><==</a>
-          <a href="#" class="text-pink-600 hover:underline">==></a>
-        </div>
-        <div class="flex justify-center">
-          <img
-            src="https://picsum.photos/id/146/800/800"
-            alt="Webcomic"
-            class="h-auto max-w-full rounded-sm"
-          />
-        </div>
-
-        <div class="my-2 flex items-center justify-between text-lg">
-          <a href="#" class="text-pink-600 hover:underline"><==</a>
-          <a href="#" class="text-pink-600 hover:underline">==></a>
-        </div>
-      </main>
-
-      {% include "_includes/footer.njk" %}
-    </div>
-  </div>
-{% endblock %}
+{% set coll = collections.comicPages %}
+{% set lastPage = coll[ (coll | length) - 1 ] %}
+{% set currentPage = lastPage %}
+{% set previousPage = coll | getPreviousCollectionItem(currentPage) %}
+{% set nextPage = coll | getNextCollectionItem(currentPage) %}
+{% set image_url = currentPage.data.image_url %}
+{% include '_includes/comic.njk' %}
